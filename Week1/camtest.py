@@ -7,6 +7,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
+'''
+This code uses snippets obtained from
+https://www.geeksforgeeks.org/how-to-update-a-plot-in-matplotlib/
+https://code.likeagirl.io/finding-dominant-colour-on-an-image-b4e075f98097
+https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+
+
+
+'''
+
 
 def find_histogram(clt):
     """
