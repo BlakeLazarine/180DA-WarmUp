@@ -80,7 +80,10 @@ while(1):
         # box = cv.boxPoints(rect)
         # box = np.int0(box)
         # cv.drawContours(frame,[box],0,(0,0,255),2)
-        img = frame[y:y+h, x:x+w]
+        shape = frame.shape
+        img = frame[shape[0]//2 - 100: shape[0]//2 + 100, shape[1]//2 - 100: shape[1]//2 + 100]
+        cv.rectangle(frame,(shape[1]//2-100,shape[0]//2-100),(shape[1]//2+100,shape[0]//2+100),(0,255,0),2)
+        # img = frame[y:y+h, x:x+w]
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
         img = img.reshape((img.shape[0] * img.shape[1],3)) #represent as row*column,channel number
