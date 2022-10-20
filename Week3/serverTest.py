@@ -8,7 +8,7 @@ while True:
     while True:
         data = conn.recv(4096)
         if not data: break
-        from_client += dada.decode('utf_8')
+        from_client += data.decode('utf_8')
         print(from_client)
         conn.send("I am SERVER\n".encode())
     conn.close()
